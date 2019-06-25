@@ -3,7 +3,7 @@
   "displayName": "ES6 JavaScript Snippets",
   "description": "JavaScript snippets using ES6 and higher",
   "icon": "icon/js-icon.png",
-  "licence": "Please refer to license.md - MIT",
+  "licence": "Please refer to LICENSE - MIT",
   "galleryBanner": {
     "color": "#edd21e",
     "theme": "dark"
