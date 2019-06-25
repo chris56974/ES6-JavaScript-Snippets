@@ -13,9 +13,10 @@ A JS snippets pack largely inspired by other snippet extensions on VSCode (Chara
 - Html (.html)
 - Vue (.vue) (Vetur extension required)
 
-###### Hints
+##### Hints
 1. `control/command + space` loads the snippet suggestions if they aren't shown right away
 2. `${1}` is where the snippet starts. `$0` is where the snippet ends.
+3. Press `tab` to move onto the next part of a snippet 
 
 ## - Imports and Exports -
 #### [req] require (Common JS)
@@ -467,3 +468,4 @@ app.listen(port, function(){
 ```
 ## License
 [MIT License]
+> Can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets&ssr=false#overview
