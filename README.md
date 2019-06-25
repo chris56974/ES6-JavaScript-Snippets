@@ -6,16 +6,16 @@ A JS snippets pack largely inspired by other snippet extensions on VSCode (Chara
 
 ##### Supported languages (file extensions)
 
-JavaScript (.js)
-TypeScript (.ts)
-JavaScript React (.jsx)
-TypeScript React (.tsx)
-Html (.html)
-Vue (.vue) (might need Vetur extension enabled)
+- JavaScript (.js)
+- TypeScript (.ts)
+- JavaScript React (.jsx)
+- TypeScript React (.tsx)
+- Html (.html)
+- Vue (.vue) (Vetur extension required)
 
 ###### Hints
-`control/command + space` loads the snippet suggestions if they aren't shown right away
-`${1}` is where the snippet starts. `$0` is where the snippet ends.
+1. `control/command + space` loads the snippet suggestions if they aren't shown right away
+2. `${1}` is where the snippet starts. `$0` is where the snippet ends.
 
 ## - Imports and Exports -
 #### [req] require (Common JS)
@@ -338,7 +338,7 @@ const ${1:functionName} = async () => {
   console.log(data);
 };$0"
 ```
-#### [fetchez] easy fetch with more options
+#### [fetchez] easy fetch with some options
 ```javascript
 const ${1:functionName} = async () => {
   const response = await fetch('${2:URL}', {
