@@ -531,12 +531,148 @@
       "const webpack = require('webpack');",
       "const path = require('path');",
       "\nconst config = {",
-      "\tentry: '${1:/src/index.js}'",
+      "\tentry: '.${1:/src/index.js}',",
       "\toutput: {",
       "\t\tpath: path.resolve(__dirname, '${2:dist}'),",
-      "\t\tfilename: '${3:bundle.js}",
-      "\t}",
+      "\t\tfilename: '${3:bundle.js}'",
+      "\t}$0",
+      "};",
+      "\nmodule.exports = config;"
+    ],
+    "description": "A basic webpack config setup"
+  },
+  "moduleRules": {
+    "prefix": "modulerules",
+    "body": [
+      "module: {",
+      "\trules: [",
+      "\t\t{",
+      "\t\t\ttest: /\\.${1:fileExtension}$/,",
+      "\t\t\tuse: ['$2-loader'$0]",
+      "\t\t}",
+      "\t]",
       "}"
-    ]
+    ],
+    "description": "add module.rules to a webpack config"
+  },
+  "webpackmr": {
+    "prefix": "webpack",
+    "body": [
+      "const webpack = require('webpack');",
+      "const path = require('path');",
+      "\nconst config = {",
+      "\tentry: '${1:/src/index.js}',",
+      "\toutput: {",
+      "\t\tpath: path.resolve(__dirname, '${2:dist}'),",
+      "\t\tfilename: '${3:bundle.js}'",
+      "\t},",
+      "\tmodule: {",
+      "\t\trules: [",
+      "\t\t\t{",
+      "\t\t\t\ttest: /\\.${4:fileExtension}$/,",
+      "\t\t\t\tuse: ['$5-loader', '$6-loader', '$7-loader']",
+      "\t\t\t}$0",
+      "\t\t]",
+      "\t}",
+      "};",
+      "\nmodule.exports = config;"
+    ],
+    "description": "Simple webpack setup with module.rules"
+  },
+  "loader1": {
+    "prefix": "loader1",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tuse: ['$2-loader']",
+      "}$0"
+    ],
+    "description": "Single loader"
+  },
+  "loader1exc": {
+    "prefix": "loader1exc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\texclude: ${2:/node_modules/},",
+      "\tuse: ['$3-loader']",
+      "}"
+    ],
+    "description": "Single loader with exclude"
+  },
+  "loader1inc": {
+    "prefix": "loader1inc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tinclude: __dirname + '${2:dist}',",
+      "\tuse: ['$3-loader']",
+      "}"
+    ],
+    "description": "Single loader with include"
+  },
+  "loader2": {
+    "prefix": "loader2",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tuse: ['$2-loader', '$3-loader']",
+      "}$0"
+    ],
+    "description": "Single loader"
+  },
+  "loader2exc": {
+    "prefix": "loader2exc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\texclude: ${2:/node_modules/},",
+      "\tuse: ['$3-loader', '$4-loader']",
+      "}"
+    ],
+    "description": "Single loader with exclude"
+  },
+  "loader2inc": {
+    "prefix": "loader2inc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tinclude: __dirname + '${2:dist}',",
+      "\tuse: ['$3-loader', '$4-loader']",
+      "}"
+    ],
+    "description": "Single loader with include"
+  },
+  "loader3": {
+    "prefix": "loader3",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tuse: ['$2-loader', '$3-loader']",
+      "}$0"
+    ],
+    "description": "Single loader"
+  },
+  "loader3exc": {
+    "prefix": "loader3exc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\texclude: ${2:/node_modules/},",
+      "\tuse: ['$3-loader', '$4-loader']",
+      "}"
+    ],
+    "description": "Single loader with exclude"
+  },
+  "loader3inc": {
+    "prefix": "loader3inc",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tinclude: __dirname + '${2:dist}',",
+      "\tuse: ['$3-loader', '$4-loader']",
+      "}"
+    ],
+    "description": "Single loader with include"
   }
 }

@@ -428,8 +428,125 @@ get ${1:propertyName}() {return this.${0}}
 ```javascript
 set ${1:propertyName}(${2:value}) {${0}}
 ```
+## - Webpack -
+#### [webpack] simple webpack setup
+```javascript
+const webpack = require('webpack');
+const path = require('path');
 
-## Misc
+const config = {
+  entry: ['.${1:./src/index.js}']
+  output: {
+    path: path.resolve(__dirname, '${2:dist}'),
+    filename: '${3:bundle.js}'
+  }$0
+};
+module.exports = config;
+```
+#### [modulerules] setup module.rules for loaders
+```javascript
+module: {
+  rules: [
+    {
+      test: /\.${1:fileExtension}$/,
+      use: ['$2-loader'$0]
+    }
+  ]
+}
+```
+#### [webpackmr] simple webpack setup with module.rules for loaders
+```javascript
+const webpack = require('webpack');
+const path = require('path');
+
+const config = {
+  entry: '${1:./src/index.js}'
+  output: {
+    path: path.resolve(__dirname, '${2:dist}'),
+    filename: '${3:bundle.js}'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.${4:fileExtension}$/,
+        use: ['$5-loader', '$6-loader', '$7-loader']
+      }$0
+    ]
+  }
+}
+
+module.exports = config;
+```
+#### [loader1] A rule using one loader (Babel, Vue)
+```
+{
+  test: /\.${1:fileExtension}$/,
+  use: ['$2-loader']
+}
+```
+#### [loader1exc] A rule using one loader with excludes (TypeScript)
+```
+{
+  test: /\.${1:fileExtension}$/,
+  exclude: ${2:/node_modules/},
+  use: ['$3-loader']
+}
+```
+#### [loader1inc] A loader with includes
+```
+{
+  test: /\.${1:fileExtension}$/,
+  include: __dirname + '${2:dist}', 
+  use: ['$3-loader']
+}
+```
+#### [loader2] A rule using two loaders 
+```
+{
+  test: /\.${1:fileExtension}$/,
+  use: ['${2:loader1}', '${3:loader2}']
+}
+```
+#### [loader2exc] A loader with excludes
+```
+{
+  test: /\.${1:fileExtension}$/,
+  exclude: ${2:/node_modules/},
+  use: ['$3-loader', '$4-loader']
+}
+```
+#### [loader2inc] A loader with include
+```
+{
+  test: /\.${1:fileExtension}$/,
+  include: __dirname + '${2:dist}', 
+  use: ['$3-loader', '$4-loader']
+}
+```
+#### [loader3] basic loader
+```
+{
+  test: /\.${1:fileExtension}$/,
+  use: ['$2-loader', $3-loader, $4-loader]
+}
+```
+#### [loader3exc] A loader with excludes
+```
+{
+  test: /\.${1:fileExtension}$/,
+  exclude: ${2:/node_modules/},
+  use: ['$3-loader', '$4-loader', '$5-loader']
+}
+```
+#### [loader3inc] A loader with include
+```
+{
+  test: /\.${1:fileExtension}$/,
+  include: __dirname + '${2:dist}', 
+  use: ['$3-loader', '$4-loader', '$5-loader']
+}
+```
+## - Misc -
 #### [dob] destructuring object
 ```javascript
 const {${1:propertyName}} = ${2:objectToDestructFrom}
@@ -465,20 +582,6 @@ app.get('/', (req, res) => res.send('Hey there!'));
 app.listen(port, function(){
   console.log('Server has started on port ${port}!!!');
 });
-```
-#### [webpack] simple webpack setup
-```javascript
-const webpack = require('webpack');
-const path = require('path');
-
-const config = {
-  entry: '${1:./src/index.js}'
-  output: {
-    path: path.resolve(__dirname, '${2:dist}'),
-    filename: '${3:bundle.js}'
-  }
-}
-module.exports = config;
 ```
 ## License
 [MIT License]
