@@ -466,6 +466,20 @@ app.listen(port, function(){
   console.log('Server has started on port ${port}!!!');
 });
 ```
+#### [webpack] simple webpack setup
+```javascript
+const webpack = require('webpack');
+const path = require('path');
+
+const config = {
+  entry: '${1:./src/index.js}'
+  output: {
+    path: path.resolve(__dirname, '${2:dist}'),
+    filename: '${3:bundle.js}'
+  }
+}
+module.exports = config;
+```
 ## License
 [MIT License]
-> Can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets&ssr=false#overview
+> The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets&ssr=false#overview

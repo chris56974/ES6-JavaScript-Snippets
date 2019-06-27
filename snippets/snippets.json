@@ -524,5 +524,19 @@
       "});"
     ],
     "description": "Some simple express boiler plate"
+  },
+  "webpack": {
+    "prefix": "webpack",
+    "body": [
+      "const webpack = require('webpack');",
+      "const path = require('path');",
+      "\nconst config = {",
+      "\tentry: '${1:/src/index.js}'",
+      "\toutput: {",
+      "\t\tpath: path.resolve(__dirname, '${2:dist}'),",
+      "\t\tfilename: '${3:bundle.js}",
+      "\t}",
+      "}"
+    ]
   }
 }
