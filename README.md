@@ -73,15 +73,11 @@ export default (${1:params}) => {$0};
 ```
 #### [ecl] export class
 ```javascript
-export default class ${1:className};{$0}
+export default class ${1:className};$0
 ```
 #### [ece] export class extends
 ```javascript
-export default class ${1:className} extends ${2:baseclassName}; {$0}
-```
-#### [ece] export class extends
-```javascript
-export default class ${1:className} extends ${2:baseclassName}; {$0}
+export default class ${1:className} extends ${2:baseclassName};$0
 ```
 ## - Console logging - 
 #### [cas] console.assert
