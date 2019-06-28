@@ -648,7 +648,7 @@
     "body": [
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: ['$2-loader', '$3-loader']",
+      "\tuse: ['$2-loader', '$3-loader', '$4-loader']",
       "}$0"
     ],
     "description": "Triple loader"
@@ -659,7 +659,7 @@
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
       "\texclude: ${2:/node_modules/},",
-      "\tuse: ['$3-loader', '$4-loader']",
+      "\tuse: ['$3-loader', '$4-loader', '$5-loader']",
       "}"
     ],
     "description": "Triple loader with exclude"
@@ -670,7 +670,7 @@
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
       "\tinclude: __dirname + '${2:dist}',",
-      "\tuse: ['$3-loader', '$4-loader']",
+      "\tuse: ['$3-loader', '$4-loader', '$5-loader']",
       "}"
     ],
     "description": "Triple loader with include"
