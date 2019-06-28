@@ -619,7 +619,7 @@
       "\tuse: ['$2-loader', '$3-loader']",
       "}$0"
     ],
-    "description": "Single loader"
+    "description": "Double loader"
   },
   "loader2exc": {
     "prefix": "loader2exc",
@@ -630,7 +630,7 @@
       "\tuse: ['$3-loader', '$4-loader']",
       "}"
     ],
-    "description": "Single loader with exclude"
+    "description": "Double loader with exclude"
   },
   "loader2inc": {
     "prefix": "loader2inc",
@@ -641,7 +641,7 @@
       "\tuse: ['$3-loader', '$4-loader']",
       "}"
     ],
-    "description": "Single loader with include"
+    "description": "Double loader with include"
   },
   "loader3": {
     "prefix": "loader3",
@@ -651,7 +651,7 @@
       "\tuse: ['$2-loader', '$3-loader']",
       "}$0"
     ],
-    "description": "Single loader"
+    "description": "Triple loader"
   },
   "loader3exc": {
     "prefix": "loader3exc",
@@ -662,7 +662,7 @@
       "\tuse: ['$3-loader', '$4-loader']",
       "}"
     ],
-    "description": "Single loader with exclude"
+    "description": "Triple loader with exclude"
   },
   "loader3inc": {
     "prefix": "loader3inc",
@@ -673,6 +673,6 @@
       "\tuse: ['$3-loader', '$4-loader']",
       "}"
     ],
-    "description": "Single loader with include"
+    "description": "Triple loader with include"
   }
 }

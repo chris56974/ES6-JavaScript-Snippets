@@ -477,14 +477,14 @@ const config = {
 
 module.exports = config;
 ```
-#### [loader1] A rule using one loader (Babel, Vue)
+#### [loader1] A single loader
 ```
 {
   test: /\.${1:fileExtension}$/,
   use: ['$2-loader']
 }
 ```
-#### [loader1exc] A rule using one loader with excludes (TypeScript)
+#### [loader1exc] A loader with exclude
 ```
 {
   test: /\.${1:fileExtension}$/,
@@ -492,7 +492,7 @@ module.exports = config;
   use: ['$3-loader']
 }
 ```
-#### [loader1inc] A loader with includes
+#### [loader1inc] A loader with include
 ```
 {
   test: /\.${1:fileExtension}$/,
@@ -500,14 +500,14 @@ module.exports = config;
   use: ['$3-loader']
 }
 ```
-#### [loader2] A rule using two loaders 
+#### [loader2] Double loader
 ```
 {
   test: /\.${1:fileExtension}$/,
   use: ['${2:loader1}', '${3:loader2}']
 }
 ```
-#### [loader2exc] A loader with excludes
+#### [loader2exc] Double loader with exclude
 ```
 {
   test: /\.${1:fileExtension}$/,
@@ -515,7 +515,7 @@ module.exports = config;
   use: ['$3-loader', '$4-loader']
 }
 ```
-#### [loader2inc] A loader with include
+#### [loader2inc] Double loader with include
 ```
 {
   test: /\.${1:fileExtension}$/,
@@ -523,14 +523,14 @@ module.exports = config;
   use: ['$3-loader', '$4-loader']
 }
 ```
-#### [loader3] basic loader
+#### [loader3] Triple loader
 ```
 {
   test: /\.${1:fileExtension}$/,
   use: ['$2-loader', $3-loader, $4-loader]
 }
 ```
-#### [loader3exc] A loader with excludes
+#### [loader3exc] Triple loader with exclude
 ```
 {
   test: /\.${1:fileExtension}$/,
@@ -538,7 +538,7 @@ module.exports = config;
   use: ['$3-loader', '$4-loader', '$5-loader']
 }
 ```
-#### [loader3inc] A loader with include
+#### [loader3inc] Triple loader with include
 ```
 {
   test: /\.${1:fileExtension}$/,
