@@ -178,13 +178,13 @@
   },
   "querySelector": {
     "prefix": "qs",
-    "body": "${1:document}.querySelector('${2:selector}');$0",
+    "body": "${1:document}.querySelector('$2');$0",
     "description": "Code snippet for \"querySelector\""
   },
   "querySelectAddEvent": {
     "prefix": "qsae",
     "body": [
-      "${1:document}.querySelector('${2:selector}').addEventListener('${3:load}', (e) => {",
+      "${1:document}.querySelector('$2}').addEventListener('${3:load}', (e) => {",
       "\t${4:// body}",
       "});"
     ],
@@ -192,22 +192,22 @@
   },
   "querySelectorAll": {
     "prefix": "qsa",
-    "body": "${1:document}.querySelectorAll('${2:selector}');$0",
+    "body": "${1:document}.querySelectorAll('$2');$0",
     "description": "Code snippet for \"querySelectorAll\""
   },
   "appendChild": {
     "prefix": "ac",
-    "body": "${1:document}.appendChild(${2:elem});$0",
+    "body": "${1:document}.appendChild($2);$0",
     "description": "Code snippet for \"appendChild\""
   },
   "removeChild": {
     "prefix": "rc",
-    "body": "${1:document}.removeChild(${2:elem});$0",
+    "body": "${1:document}.removeChild($2);$0",
     "description": "Code snippet for \"removeChild\""
   },
   "createElement": {
     "prefix": "ce",
-    "body": "${1:document}.createElement(${2:elem});$0",
+    "body": "${1:document}.createElement('$2');$0",
     "description": "Code snippet for \"createElement\""
   },
   "createDocumentFragment": {
