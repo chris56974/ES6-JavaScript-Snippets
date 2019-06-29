@@ -210,6 +210,11 @@
     "body": "${1:document}.createElement('$2');$0",
     "description": "Code snippet for \"createElement\""
   },
+  "createTextNode": {
+    "prefix": "ctn",
+    "body": "${1:document}.createTextNode('$2');$0",
+    "description": "Code snippet for \"createTextNode\""
+  },
   "createDocumentFragment": {
     "prefix": "cdf",
     "body": "${1:document}.createDocumentFragment();$0",

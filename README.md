@@ -181,9 +181,13 @@ ${1:document}.appendChild(${2:elem});$0
 ```javascript
 ${1:document}.removeChild(${2:elem});$0
 ```
-#### [cel] createElement
+#### [ce] createElement
 ```javascript
 ${1:document}.createElement(${2:elem});$0
+```
+#### [ctn] createTextNode
+```javascript
+${1:document}.createTextNode('$2');$0
 ```
 #### [cdf] createDocumentFragment
 ```javascript
