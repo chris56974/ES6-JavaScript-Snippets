@@ -273,9 +273,15 @@ ${1:object}.prototype.${2:method} = function(${3:arguments}) {
 ```
 #### [iife] immediately-invoked function expression
 ```javascript
-(function(${1:window}, ${2:document}) {
-  ${3:// body}
-})(${1:window}, ${2:document});
+(($1) => {
+  $0
+})($1);
+```
+#### [es5iife] immediately-invoked function expression (ES5)
+```javascript
+(function ($1) {
+  $0
+})($1);
 ```
 #### [call] function call
 ```javascript

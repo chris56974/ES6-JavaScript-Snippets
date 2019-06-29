@@ -304,12 +304,21 @@
     ],
     "description": "Code snippet for prototype"
   },
+  "immediately-invoked function expression ES5": {
+    "prefix": "es5iife",
+    "body": [
+      "(function($1) {",
+      "\t$0",
+      "})($1);"
+    ],
+    "description": "Code snippet for immediately-invoked function expression"
+  },
   "immediately-invoked function expression": {
     "prefix": "iife",
     "body": [
-      "(function(${1:window}, ${2:document}) {",
-      "\t${3:// body}",
-      "})(${1:window}, ${2:document});"
+      "(($1) => {",
+      "\t$0",
+      "})($1);"
     ],
     "description": "Code snippet for immediately-invoked function expression"
   },
