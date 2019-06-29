@@ -14,9 +14,9 @@ A JS snippets pack largely inspired by other snippet extensions on VSCode (Chara
 - Vue (.vue) (Vetur extension required)
 
 ##### Hints
-1. `control/command + space` loads the snippet suggestions if they aren't shown right away
+1. `control/command + space` loads the snippet suggestions if they aren't shown right away.
 2. `${1}` is where the snippet starts. `$0` is where the snippet ends.
-3. Press `tab` to move onto the next part of a snippet 
+3. Press `tab` to move onto the next part of a snippet.
 ___
 ## - Imports and Exports -
 #### [req] require (Common JS)
@@ -117,6 +117,10 @@ console.info(${1});
 console.log(${1});
 ```
 #### [clo] console.logObject
+```javascript
+console.log('${1:object}', ${1:object})
+```
+#### [cloo] alternative console.logObject
 ```javascript
 console.log('${1:object}', ${1:object})
 ```

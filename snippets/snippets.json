@@ -120,6 +120,11 @@
     "body": "console.log('${1:object}', ${1:object});$0",
     "description": "Logs property with name."
   },
+  "consoleLogObjectAlternative": {
+    "prefix": "cloo",
+    "body": "console.log('${1:description}', ${2:object});$0",
+    "description": "Logs property with name."
+  },
   "consoleTrace": {
     "prefix": "ctr",
     "body": "console.trace(${1:object})",
