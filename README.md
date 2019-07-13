@@ -488,14 +488,14 @@ const config = {
 module.exports = config;
 ```
 #### [loader1] A single loader
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   use: ['$2-loader']
 }
 ```
 #### [loader1exc] A loader with exclude
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   exclude: ${2:/node_modules/},
@@ -503,7 +503,7 @@ module.exports = config;
 }
 ```
 #### [loader1inc] A loader with include
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   include: __dirname + '${2:dist}', 
@@ -511,14 +511,14 @@ module.exports = config;
 }
 ```
 #### [loader2] Double loader
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   use: ['${2:loader1}', '${3:loader2}']
 }
 ```
 #### [loader2exc] Double loader with exclude
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   exclude: ${2:/node_modules/},
@@ -526,7 +526,7 @@ module.exports = config;
 }
 ```
 #### [loader2inc] Double loader with include
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   include: __dirname + '${2:dist}', 
@@ -534,14 +534,14 @@ module.exports = config;
 }
 ```
 #### [loader3] Triple loader
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   use: ['$2-loader', $3-loader, $4-loader]
 }
 ```
 #### [loader3exc] Triple loader with exclude
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   exclude: ${2:/node_modules/},
@@ -549,7 +549,7 @@ module.exports = config;
 }
 ```
 #### [loader3inc] Triple loader with include
-```
+```json
 {
   test: /\.${1:fileExtension}$/,
   include: __dirname + '${2:dist}', 
@@ -593,6 +593,14 @@ app.listen(port, function(){
   console.log('Server has started on port ${port}!!!');
 });
 ```
+#### [gitbashssh] setup ssh-agent to save your password in your current terminal
+```
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+```
+1. Copy and paste these two lines into your terminal
+2. Push code to github without re-entering you password
+
 ## License
 [MIT License]
 > The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets&ssr=false#overview
