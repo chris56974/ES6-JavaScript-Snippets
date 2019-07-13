@@ -699,7 +699,7 @@
     "body": [
       "eval $(ssh-agent -s)",
       "ssh-add ~/.ssh/id_rsa"
-    ],``
+    ],
     "description": "Type these into your git-bash terminal to save you from typing your ssh password when pushing to github"
   }
 }
