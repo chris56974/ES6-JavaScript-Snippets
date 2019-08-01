@@ -170,8 +170,8 @@
   "addEventListener": {
     "prefix": "ae",
     "body": [
-      "${1:document}.addEventListener('${2:load}', e => {",
-      "\t${3:// body}",
+      "${1:document}.addEventListener('${2:load}', ${3:()} => {",
+      "\t${0}",
       "});"
     ],
     "description": "Code snippet for \"addEventListener\""
@@ -184,8 +184,8 @@
   "querySelectAddEvent": {
     "prefix": "qsae",
     "body": [
-      "${1:document}.querySelector('$2}').addEventListener('${3:load}', (e) => {",
-      "\t${4:// body}",
+      "${1:document}.querySelector('$2}').addEventListener('${3:load}', ${4:()} => {",
+      "\t$0",
       "});"
     ],
     "description": "Code snippet for \"querySelectorAndAddEvent\""
@@ -547,8 +547,7 @@
   "webpack": {
     "prefix": "webpack",
     "body": [
-      "const webpack = require('webpack');",
-      "const path = require('path');",
+      "const { resolve } = require('path');",
       "\nconst config = {",
       "\tentry: '.${1:/src/index.js}',",
       "\toutput: {",
@@ -567,7 +566,7 @@
       "\trules: [",
       "\t\t{",
       "\t\t\ttest: /\\.${1:fileExtension}$/,",
-      "\t\t\tuse: ['$2-loader'$0]",
+      "\t\t\tuse: $0",
       "\t\t}",
       "\t]",
       "}"
@@ -575,22 +574,21 @@
     "description": "add module.rules to a webpack config"
   },
   "webpackmr": {
-    "prefix": "webpack",
+    "prefix": "webpackmr",
     "body": [
-      "const webpack = require('webpack');",
-      "const path = require('path');",
+      "const { resolve } = require('path');",
       "\nconst config = {",
       "\tentry: '${1:/src/index.js}',",
       "\toutput: {",
-      "\t\tpath: path.resolve(__dirname, '${2:dist}'),",
+      "\t\tpath: resolve(__dirname, '${2:dist}'),",
       "\t\tfilename: '${3:bundle.js}'",
       "\t},",
       "\tmodule: {",
       "\t\trules: [",
       "\t\t\t{",
       "\t\t\t\ttest: /\\.${4:fileExtension}$/,",
-      "\t\t\t\tuse: ['$5-loader', '$6-loader', '$7-loader']",
-      "\t\t\t}$0",
+      "\t\t\t\tuse: $0",
+      "\t\t\t}",
       "\t\t]",
       "\t}",
       "};",
@@ -603,10 +601,25 @@
     "body": [
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: ['$2-loader']",
+      "\tuse: '$2-loader'",
       "}$0"
     ],
     "description": "Single loader"
+  },
+  "loader1options": {
+    "prefix": "loader1options",
+    "body": [
+      "{",
+      "\ttest: /\\.${1:fileExtension}$/,",
+      "\tuse: {",
+      "\t\tloader: '$2-loader',",
+      "\t\toptions: {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}",
+      "}$0"
+    ],
+    "description": "Single loader with options"
   },
   "loader1exc": {
     "prefix": "loader1exc",
@@ -614,8 +627,8 @@
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
       "\texclude: ${2:/node_modules/},",
-      "\tuse: ['$3-loader']",
-      "}"
+      "\tuse: '$3-loader'",
+      "}$0"
     ],
     "description": "Single loader with exclude"
   },
@@ -625,7 +638,7 @@
       "{",
       "\ttest: /\\.${1:fileExtension}$/,",
       "\tinclude: __dirname + '${2:dist}',",
-      "\tuse: ['$3-loader']",
+      "\tuse: '$3-loader'",
       "}"
     ],
     "description": "Single loader with include"

@@ -155,8 +155,8 @@ debugger;
 ## - DOM -
 #### [ae] addEventListener
 ```javascript
-${1:document}.addEventListener('${2:load}', (e) => {
-   ${3:// body}
+${1:document}.addEventListener('${2:load}', ${3:()} => {
+   $0
 });
 ```
 #### [qs] querySelector
@@ -165,8 +165,8 @@ ${1:document}.querySelector('${2:selector}');$0
 ```
 #### [qsae] querySelect + addEventListener
 ```javascript
-${1:document}.querySelector('${2:selector}').addEventListener('${3:load}', (e) => {
-    ${4:// body},
+${1:document}.querySelector('${2:selector}').addEventListener('${3:load}', ${4:()} => {
+    $0
 });
 ```
 #### [qsa] querySelectorAll
@@ -441,13 +441,12 @@ set ${1:propertyName}(${2:value}) {${0}}
 ## - Webpack -
 #### [webpack] simple webpack setup
 ```javascript
-const webpack = require('webpack');
-const path = require('path');
+const { resolve } = require('path');
 
 const config = {
   entry: ['.${1:./src/index.js}']
   output: {
-    path: path.resolve(__dirname, '${2:dist}'),
+    path: resolve(__dirname, '${2:dist}'),
     filename: '${3:bundle.js}'
   }$0
 };
@@ -459,28 +458,27 @@ module: {
   rules: [
     {
       test: /\.${1:fileExtension}$/,
-      use: ['$2-loader'$0]
+      use: $0
     }
   ]
 }
 ```
 #### [webpackmr] simple webpack setup with module.rules for loaders
 ```javascript
-const webpack = require('webpack');
-const path = require('path');
+const { resolve } = require('path');
 
 const config = {
   entry: '${1:./src/index.js}'
   output: {
-    path: path.resolve(__dirname, '${2:dist}'),
+    path: resolve(__dirname, '${2:dist}'),
     filename: '${3:bundle.js}'
   },
   module: {
     rules: [
       {
         test: /\.${4:fileExtension}$/,
-        use: ['$5-loader', '$6-loader', '$7-loader']
-      }$0
+        use: $0
+      }
     ]
   }
 }
@@ -491,15 +489,27 @@ module.exports = config;
 ```json
 {
   test: /\.${1:fileExtension}$/,
-  use: ['$2-loader']
+  use: '$2-loader'
 }
+```
+#### [loader1options] A loader with options 
+```json
+{
+  test: /\\.${1:fileExtension}$/,
+  use: {
+    loader: '$2-loader',
+    options: {
+      $0
+    }
+  }
+}$0
 ```
 #### [loader1exc] A loader with exclude
 ```json
 {
   test: /\.${1:fileExtension}$/,
   exclude: ${2:/node_modules/},
-  use: ['$3-loader']
+  use: '$3-loader'
 }
 ```
 #### [loader1inc] A loader with include
@@ -507,7 +517,7 @@ module.exports = config;
 {
   test: /\.${1:fileExtension}$/,
   include: __dirname + '${2:dist}', 
-  use: ['$3-loader']
+  use: '$3-loader'
 }
 ```
 #### [loader2] Double loader
