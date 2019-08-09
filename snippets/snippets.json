@@ -297,7 +297,12 @@
   },
   "namedFunction": {
     "prefix": "fn",
-    "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n};$0",
+    "body": "const ${1:name} = ${2:arg} => $0",
+    "description": "Creates a named function in ES6 syntax"
+  },
+  "namedFunction2": {
+    "prefix": "fnn",
+    "body": "const ${1:name} = (${2:params}) => {\n\t$0\n};",
     "description": "Creates a named function in ES6 syntax"
   },
   "prototype": {
@@ -538,7 +543,7 @@
       "const app = express();",
       "const port = process.env.PORT || ${1:5000}",
       "\napp.get('/', (req, res) => res.send('Hey there!'));",
-      "\napp.listen(port, function(){",
+      "\napp.listen(port, () => {",
       "\tconsole.log(`Server has started on port \\${port\\}!!!`);",
       "});"
     ],

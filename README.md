@@ -263,10 +263,14 @@ ${1:array}.forEach(function(item) {
   ${2:// body}
 }
 ```
-#### [fn] function
+#### [fn] single line function
 ```javascript
-function ${1:methodName} (${2:arguments}) {
-  ${3:// body}
+const ${1:methodName} = ${2:arg} => {$3}
+```
+#### [fnn] single line function
+```javascript
+const ${1:methodName} = (${2:args}) => {
+  $0
 }
 ```
 #### [pr] prototype
@@ -599,7 +603,7 @@ const port = process.env.PORT || 5000
 
 app.get('/', (req, res) => res.send('Hey there!'));
 
-app.listen(port, function(){
+app.listen(port, () => {
   console.log('Server has started on port ${port}!!!');
 });
 ```
