@@ -159,6 +159,10 @@ ${1:document}.addEventListener('${2:load}', ${3:()} => {
    $0
 });
 ```
+#### [ae] addEventListener
+```javascript
+${1:document}.addEventListener('${2:load}', ${3:()})
+```
 #### [qs] querySelector
 ```javascript
 ${1:document}.querySelector('${2:selector}');$0

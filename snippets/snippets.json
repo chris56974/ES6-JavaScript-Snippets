@@ -176,6 +176,13 @@
     ],
     "description": "Code snippet for \"addEventListener\""
   },
+  "addEventListener2": {
+    "prefix": "aee",
+    "body": [
+      "${1:document}.addEventListener('${2:load}', ${3:()})"
+    ],
+    "description": "Code snippet for \"addEventListener\""
+  },
   "querySelector": {
     "prefix": "qs",
     "body": "${1:document}.querySelector('$2');$0",
@@ -184,7 +191,7 @@
   "querySelectAddEvent": {
     "prefix": "qsae",
     "body": [
-      "${1:document}.querySelector('$2}').addEventListener('${3:load}', ${4:()} => {",
+      "${1:document}.querySelector('$2').addEventListener('${3:load}', ${4:()} => {",
       "\t$0",
       "});"
     ],
