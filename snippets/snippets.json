@@ -322,7 +322,7 @@
     "description": "Code snippet for prototype"
   },
   "immediately-invoked function expression ES5": {
-    "prefix": "es5iife",
+    "prefix": "iife",
     "body": [
       "(function($1) {",
       "\t$0",
@@ -331,7 +331,7 @@
     "description": "Code snippet for immediately-invoked function expression"
   },
   "immediately-invoked function expression": {
-    "prefix": "iife",
+    "prefix": "iifeES6",
     "body": [
       "(($1) => {",
       "\t$0",

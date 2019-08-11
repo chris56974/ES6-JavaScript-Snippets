@@ -283,13 +283,13 @@ ${1:object}.prototype.${2:method} = function(${3:arguments}) {
   ${4:// body}
 }
 ```
-#### [iife] immediately-invoked function expression
+#### [iifees6] immediately-invoked function expression
 ```javascript
 (($1) => {
   $0
 })($1);
 ```
-#### [es5iife] immediately-invoked function expression (ES5)
+#### [iife] immediately-invoked function expression (ES5)
 ```javascript
 (function ($1) {
   $0
