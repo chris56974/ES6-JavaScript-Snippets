@@ -1,4 +1,16 @@
 ## ES6 JavaScript Snippets for Visual Studio Code 
+<p>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
+    <img src="https://vsmarketplacebadge.apphb.com/version-short/Cjay.es6-javascript-snippets.svg">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
+    <img src="https://vsmarketplacebadge.apphb.com/installs/Cjay.es6-javascript-snippets.svg">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
+    <img src="https://vsmarketplacebadge.apphb.com/downloads-short/Cjay.es6-javascript-snippets.svg">
+  </a>
+</p>
+
 
 A JS snippets pack largely inspired by other snippet extensions on VSCode (Charalampos Karypidis, Mahmoud Ali, Dsznajder) but with a few of my own twists and added snippets !! :)
 
@@ -621,4 +633,4 @@ ssh-add ~/.ssh/id_rsa
 
 ## License
 [MIT License]
-> The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets&ssr=false#overview
+> The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets
