@@ -624,13 +624,16 @@ app.listen(port, () => {
 });
 ```
 #### [gitbashssh] setup ssh-agent to save your password in your current terminal
-```
+```bash
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 ```
 1. Copy and paste these two lines into your terminal
 2. Push code to github without re-entering you password
-
+#### [quokka] if you use quokka it will fill in the query string for u
+```js
+/*?*/
+```
 ## License
 [MIT License]
 > The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets
