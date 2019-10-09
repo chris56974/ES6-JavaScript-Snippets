@@ -728,7 +728,7 @@
     "description": "Type these into your git-bash terminal to save you from typing your ssh password when pushing to github"
   },
   "quokkaquery": {
-    "prefix": "quokkaquery",
+    "prefix": "q",
     "body": "/*?*/",
     "description": "Type this to get quokka query string"
   }
