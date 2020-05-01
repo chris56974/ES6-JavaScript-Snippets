@@ -40,7 +40,7 @@
   },
   "exportDefault": {
     "prefix": "exp",
-    "body": "export default $1;$0"
+    "body": "export default $0;"
   },
   "exportDestructing": {
     "prefix": "exd",
@@ -57,7 +57,7 @@
   },
   "exportDefaultFunction": {
     "prefix": "edf",
-    "body": "export default (${1:params}) => {\n\t$3\n};$0\n",
+    "body": "export default ($1) => {\n\t$0\n};\n",
     "description": "Export default function in ES6 syntax"
   },
   "exportClass": {

@@ -65,7 +65,7 @@ import { ${1:originalName} as ${2:alias} } from '${3:module}';$0
 ```
 #### [exp] export default
 ```javascript
-export default $1$0
+export default $0;
 ```
 #### [exd] export destructuring
 ```javascript
@@ -81,7 +81,7 @@ export const ${1:functionName} = (${2:params}) => {$0};
 ```
 #### [edf] export default function
 ```javascript
-export default (${1:params}) => {$0};
+export default ($1) => {$0};
 ```
 #### [ecl] export class
 ```javascript
