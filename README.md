@@ -318,7 +318,7 @@ ${1:method}.apply(${2:context}, [${3:arguments}])
 #### [ofn] function as a property of an object
 ```javascript
 ${1:functionName}: function(${2:arguments}) {
-	${3:// body}
+	$0
 }
 ```
 #### [si] setInterval
@@ -361,46 +361,15 @@ const promise = new Promise((resolve, reject) => {
   $5
 });$0",
 ```
-#### [fetchget] simple fetch
+#### [nodefetch] node fetch
 ```javascript
-const ${1:functionName} = async () => {
-  const response = await fetch('${2:URL}');
-  const data = await response.json();
-  console.log(data);
-};$0"
+const fetch = require('node-fetch')
+
+fetch(${1:URL}).then(res => res.json).then(console.log)
 ```
-#### [fetchez] easy fetch with some options
+#### [clientfetch] client fetch
 ```javascript
-const ${1:functionName} = async () => {
-  const response = await fetch('${2:URL}', {
-    method: '${3:*GET/POST/PUT/DELETE}',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-const data = await response.json();
-console.log(data);${0}
-};$0"
-```
-#### [fetchfull] fetch with all options (`*` means default)
-```javascript
-const ${1:functionName} = async () => {
-  const response = await fetch('${2:URL}', {
-    method: '${3:*GET/POST/PUT/DELETE}',
-    mode: '${4:*same-origin/cors/no-cors}',
-    cache: '${5:default*/no-cache/reload/orce-cache/only-if-cached}',
-    credentials: '${6:Credentials}',
-    headers: {",
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    redirect: '${6:*follow/manual/error}',
-    referrer: '${7:*client, no-referrer}',
-    body: JSON.stringify(${8:data}),
-  });
-const data = await response.json();
-console.log(data);${0}
-};
+fetch(${1:URL}).then(res => res.json).then(console.log)
 ```
 ## - Classes -
 #### [cla1] simple class (1 prop)
@@ -463,128 +432,19 @@ set ${1:propertyName}(${2:value}) {${0}}
 ```javascript
 const { resolve } = require('path');
 
-const config = {
-  entry: ['.${1:./src/index.js}']
+module.exports = {
+  entry: ${1:'./src/index.js'},
   output: {
-    path: resolve(__dirname, '${2:dist}'),
-    filename: '${3:bundle.js}'
-  }$0
-};
-module.exports = config;
-```
-#### [modulerules] setup module.rules for loaders
-```javascript
-module: {
-  rules: [
-    {
-      test: /\.${1:fileExtension}$/,
-      use: $0
-    }
-  ]
-}
-```
-#### [webpackmr] simple webpack setup with module.rules for loaders
-```javascript
-const { resolve } = require('path');
-
-const config = {
-  entry: '${1:./src/index.js}'
-  output: {
-    path: resolve(__dirname, '${2:dist}'),
-    filename: '${3:bundle.js}'
+    path: resolve(__dirname, ${2:'./dist'}),
+    filename: '${3:[name].bundle.js}'
   },
   module: {
     rules: [
-      {
-        test: /\.${4:fileExtension}$/,
-        use: $0
-      }
+      test: /\\.${4:fileExtension}$/",
+      use: $0
     ]
   }
-}
-
-module.exports = config;
-```
-#### [loader1] A single loader
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  use: '$2-loader'
-}
-```
-#### [loader1options] A loader with options 
-```json
-{
-  test: /\\.${1:fileExtension}$/,
-  use: {
-    loader: '$2-loader',
-    options: {
-      $0
-    }
-  }
-}$0
-```
-#### [loader1exc] A loader with exclude
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  exclude: ${2:/node_modules/},
-  use: '$3-loader'
-}
-```
-#### [loader1inc] A loader with include
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  include: __dirname + '${2:dist}', 
-  use: '$3-loader'
-}
-```
-#### [loader2] Double loader
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  use: ['${2:loader1}', '${3:loader2}']
-}
-```
-#### [loader2exc] Double loader with exclude
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  exclude: ${2:/node_modules/},
-  use: ['$3-loader', '$4-loader']
-}
-```
-#### [loader2inc] Double loader with include
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  include: __dirname + '${2:dist}', 
-  use: ['$3-loader', '$4-loader']
-}
-```
-#### [loader3] Triple loader
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  use: ['$2-loader', $3-loader, $4-loader]
-}
-```
-#### [loader3exc] Triple loader with exclude
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  exclude: ${2:/node_modules/},
-  use: ['$3-loader', '$4-loader', '$5-loader']
-}
-```
-#### [loader3inc] Triple loader with include
-```json
-{
-  test: /\.${1:fileExtension}$/,
-  include: __dirname + '${2:dist}', 
-  use: ['$3-loader', '$4-loader', '$5-loader']
-}
+};
 ```
 ## - Misc -
 #### [dob] destructuring object
@@ -615,13 +475,11 @@ prompt('${1:msg}');
 ```javascript
 const express = require('express')
 const app = express();
-const port = process.env.PORT || 5000
+const port = process.env.PORT || {$1: 5000}
 
 app.get('/', (req, res) => res.send('Hey there!'));
 
-app.listen(port, () => {
-  console.log('Server has started on port ${port}!!!');
-});
+app.listen(port, () => { console.log('Server has started on port ${port}!!!'); });
 ```
 #### [gitbashssh] setup ssh-agent to save your password in your current terminal
 ```bash

@@ -35,8 +35,8 @@
   },
   "moduleExports": {
     "prefix": "mex",
-    "body": "module.exports = {\n\t$1\n};$0\n",
-    "description": "Module exports from Common JS, node syntax at ES6"
+    "body": "module.exports = {\n\t$0\n};\n",
+    "description": "Module exports from Common JS" 
   },
   "exportDefault": {
     "prefix": "exp",
@@ -353,7 +353,7 @@
     "prefix": "ofn",
     "body": [
       "${1:functionName}: function(${2:arguments}) {",
-      "\t${3:// body}",
+      "\t$0",
       "}"
     ],
     "description": "Code snippet for function as a property of an object"
@@ -494,107 +494,42 @@
     "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
     "description": "Creates a setter property inside a class in ES6 syntax"
   },
-  "fetchFull": {
-    "prefix": "fetchfull",
+  "nodeFetch": {
+    "prefix": "nodefetch",
     "body": [
-      "const ${1:functionName} = async () => {",
-      "\tconst response = await fetch('${2:URL}', {",
-      "\t\tmethod: '${3:*GET/POST/PUT/DELETE}',",
-      "\t\tmode: '${4:*same-origin/*cors/no-cors}',",
-      "\t\tcache: '${5:default*/no-cache/reload/force-cache/only-if-cached}',",
-      "\t\tcredentials: '${6:Credentials}',",
-      "\t\theaders: {",
-      "\t\t\t'Content-Type': 'application/json',",
-      "\t\t},",
-      "\t\tredirect: '${7:*follow/manual/error}',",
-      "\t\treferrer: '${8:*client, no-referrer}',",
-      "\t\tbody: JSON.stringify(${9:data}),",
-      "\t});",
-      "\tconst data = await response.json();",
-      "\tconsole.log(data);${0}",
-      "};"
+      "const fetch = require('node-fetch');\n",
+      "fetch(${1:URL}).then(res => res.json).then(console.log)"
     ],
-    "description": "Fetch with all available options with async await"
+    "description": "Node-fetch and GET a URL "
   },
-  "fetchGet": {
-    "prefix": "fetchget",
+  "clientFetch": {
+    "prefix": "clientfetch",
     "body": [
-      "const ${1:functionName} = async () => {",
-      "\tconst response = await fetch('${2:URL}');",
-      "\tconst data = await response.json();",
-      "\tconsole.log(data);",
-      "};$0"
+      "fetch('${1:URL}').then(res => res.json).then(console.log)"
     ],
-    "description": "Simple fetch get"
-  },
-  "fetchEZ": {
-    "prefix": "fetchez",
-    "body": [
-      "const ${1:functionName} = async () => {",
-      "\tconst response = await fetch('${2:URL}', {",
-      "\t\tmethod: '${3:*GET/POST/PUT/DELETE}',",
-      "\t\theaders: {",
-      "\t\t\t'Content-Type': 'application/json',",
-      "\t\t},",
-      "\t});",
-      "\tconst data = await response.json();",
-      "console.log(data);${0}",
-      "};"
-    ],
-    "description": "generic fetch with async/await"
+    "description": "Fetch a URL"
   },
   "express": {
     "prefix": "expr",
     "body": [
       "const express = require('express')",
       "const app = express();",
-      "const port = process.env.PORT || ${1:5000}",
-      "\napp.get('/', (req, res) => res.send('Hey there!'));",
-      "\napp.listen(port, () => {",
-      "\tconsole.log(`Server has started on port \\${port\\}!!!`);",
-      "});"
+      "const port = process.env.PORT || ${1:5000}\n",
+      "app.get('/', (req, res) => res.send('Hey there!'));\n",
+      "app.listen(port, () => { console.log(`Server has started on port \\${port\\}!!!`) });"
     ],
-    "description": "Some simple express boiler plate"
+    "description": "Express boiler plate"
   },
   "webpack": {
     "prefix": "webpack",
     "body": [
       "const { resolve } = require('path');",
-      "\nconst config = {",
-      "\tentry: '.${1:/src/index.js}',",
+      "\nmodule.exports = {",
+      "\tentry: ${1:'./src/index.js'},",
       "\toutput: {",
-      "\t\tpath: path.resolve(__dirname, '${2:dist}'),",
-      "\t\tfilename: '${3:bundle.js}'",
-      "\t}$0",
-      "};",
-      "\nmodule.exports = config;"
-    ],
-    "description": "A basic webpack config setup"
-  },
-  "moduleRules": {
-    "prefix": "modulerules",
-    "body": [
-      "module: {",
-      "\trules: [",
-      "\t\t{",
-      "\t\t\ttest: /\\.${1:fileExtension}$/,",
-      "\t\t\tuse: $0",
-      "\t\t}",
-      "\t]",
-      "}"
-    ],
-    "description": "add module.rules to a webpack config"
-  },
-  "webpackmr": {
-    "prefix": "webpackmr",
-    "body": [
-      "const { resolve } = require('path');",
-      "\nconst config = {",
-      "\tentry: '${1:/src/index.js}',",
-      "\toutput: {",
-      "\t\tpath: resolve(__dirname, '${2:dist}'),",
-      "\t\tfilename: '${3:bundle.js}'",
-      "\t},",
+      "\t\tpath: ${2:'./dist}'),",
+      "\t\tfilename: '${3:[name].bundle.js}'",
+      "\t}",
       "\tmodule: {",
       "\t\trules: [",
       "\t\t\t{",
@@ -603,121 +538,9 @@
       "\t\t\t}",
       "\t\t]",
       "\t}",
-      "};",
-      "\nmodule.exports = config;"
+      "};"
     ],
-    "description": "Simple webpack setup with module.rules"
-  },
-  "loader1": {
-    "prefix": "loader1",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: '$2-loader'",
-      "}$0"
-    ],
-    "description": "Single loader"
-  },
-  "loader1options": {
-    "prefix": "loader1options",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: {",
-      "\t\tloader: '$2-loader',",
-      "\t\toptions: {",
-      "\t\t\t$0",
-      "\t\t}",
-      "\t}",
-      "}$0"
-    ],
-    "description": "Single loader with options"
-  },
-  "loader1exc": {
-    "prefix": "loader1exc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\texclude: ${2:/node_modules/},",
-      "\tuse: '$3-loader'",
-      "}$0"
-    ],
-    "description": "Single loader with exclude"
-  },
-  "loader1inc": {
-    "prefix": "loader1inc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tinclude: __dirname + '${2:dist}',",
-      "\tuse: '$3-loader'",
-      "}"
-    ],
-    "description": "Single loader with include"
-  },
-  "loader2": {
-    "prefix": "loader2",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: ['$2-loader', '$3-loader']",
-      "}$0"
-    ],
-    "description": "Double loader"
-  },
-  "loader2exc": {
-    "prefix": "loader2exc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\texclude: ${2:/node_modules/},",
-      "\tuse: ['$3-loader', '$4-loader']",
-      "}"
-    ],
-    "description": "Double loader with exclude"
-  },
-  "loader2inc": {
-    "prefix": "loader2inc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tinclude: __dirname + '${2:dist}',",
-      "\tuse: ['$3-loader', '$4-loader']",
-      "}"
-    ],
-    "description": "Double loader with include"
-  },
-  "loader3": {
-    "prefix": "loader3",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tuse: ['$2-loader', '$3-loader', '$4-loader']",
-      "}$0"
-    ],
-    "description": "Triple loader"
-  },
-  "loader3exc": {
-    "prefix": "loader3exc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\texclude: ${2:/node_modules/},",
-      "\tuse: ['$3-loader', '$4-loader', '$5-loader']",
-      "}"
-    ],
-    "description": "Triple loader with exclude"
-  },
-  "loader3inc": {
-    "prefix": "loader3inc",
-    "body": [
-      "{",
-      "\ttest: /\\.${1:fileExtension}$/,",
-      "\tinclude: __dirname + '${2:dist}',",
-      "\tuse: ['$3-loader', '$4-loader', '$5-loader']",
-      "}"
-    ],
-    "description": "Triple loader with include"
+    "description": "A basic webpack config setup"
   },
   "gitbashagent": {
     "prefix": "gitbashssh",
@@ -725,10 +548,10 @@
       "eval $(ssh-agent -s)",
       "ssh-add ~/.ssh/id_rsa"
     ],
-    "description": "Type these into your git-bash terminal to save you from typing your ssh password when pushing to github"
+    "description": "Type this into your git-bash terminal for pushing to github"
   },
   "quokkaquery": {
-    "prefix": "q",
+    "prefix": "quokka",
     "body": "/*?*/",
     "description": "Type this to get quokka query string"
   }
