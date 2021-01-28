@@ -167,23 +167,15 @@ debugger;
 ## - DOM -
 #### [ae] addEventListener
 ```javascript
-${1:document}.addEventListener('${2:load}', ${3:()} => {
-   $0
-});
-```
-#### [ae] addEventListener
-```javascript
-${1:document}.addEventListener('${2:load}', ${3:()})
+addEventListener('${1:load}', $0)
 ```
 #### [qs] querySelector
 ```javascript
-${1:document}.querySelector('${2:selector}');$0
+${1:document}.querySelector('$0')
 ```
 #### [qsae] querySelect + addEventListener
 ```javascript
-${1:document}.querySelector('${2:selector}').addEventListener('${3:load}', ${4:()} => {
-    $0
-});
+${1:document}.querySelector('${2:selector}').addEventListener('${3:load}', $0)
 ```
 #### [qsa] querySelectorAll
 ```javascript

@@ -170,30 +170,19 @@
   "addEventListener": {
     "prefix": "ae",
     "body": [
-      "${1:document}.addEventListener('${2:load}', ${3:()} => {",
-      "\t${0}",
-      "});"
-    ],
-    "description": "Code snippet for \"addEventListener\""
-  },
-  "addEventListener2": {
-    "prefix": "aee",
-    "body": [
-      "${1:document}.addEventListener('${2:load}', ${3:()})"
+      "addEventListener('${1:load}', $0)"
     ],
     "description": "Code snippet for \"addEventListener\""
   },
   "querySelector": {
     "prefix": "qs",
-    "body": "${1:document}.querySelector('$2');$0",
+    "body": "${1:document}.querySelector('$0')",
     "description": "Code snippet for \"querySelector\""
   },
   "querySelectAddEvent": {
     "prefix": "qsae",
     "body": [
-      "${1:document}.querySelector('$2').addEventListener('${3:load}', ${4:()} => {",
-      "\t$0",
-      "});"
+      "${1:document}.querySelector('$2').addEventListener('${3:load}', $0)"
     ],
     "description": "Code snippet for \"querySelectorAndAddEvent\""
   },
