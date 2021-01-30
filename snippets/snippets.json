@@ -11,7 +11,7 @@
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $1 } from '${2:module}';$0",
+    "body": "import {$2 } from '${1:module}';$0",
     "description": "Imports only a portion of a module using ES6 modules"
   },
   "importEverything": {

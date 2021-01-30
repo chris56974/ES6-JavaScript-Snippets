@@ -53,7 +53,7 @@ import '${1:module}';$0
 ```
 #### [imd] import destructuring
 ```javascript
-import { ${1} } from '${2:module};'$0
+import {$2 } from '${1:module};'$0
 ```
 #### [ime] import everything as
 ```javascript
