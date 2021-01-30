@@ -14,18 +14,42 @@
     "type": "git",
     "url": "https://github.com/Chris56974/ES6-JavaScript-Snippets"
   },
-  "version": "0.5.8",
-  "engines": { "vscode": "^1.35.0" },
-  "categories": [ "Snippets" ],
-  "keywords": [ "Javascript" ],
+  "version": "0.5.9",
+  "engines": {
+    "vscode": "^1.35.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Javascript"
+  ],
   "contributes": {
     "snippets": [
-      { "language": "javascript", "path": "./snippets/snippets.json" },
-      { "language": "typescript", "path": "./snippets/snippets.json" },
-      { "language": "javascriptreact", "path": "./snippets/snippets.json" },
-      { "language": "typescriptreact", "path": "./snippets/snippets.json" },
-      { "language": "html", "path": "./snippets/snippets.json" },
-      { "language": "vue", "path": "./snippets/snippets.json" }
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/snippets.json"
+      }
     ]
   }
 }
