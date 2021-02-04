@@ -132,10 +132,6 @@ console.log(${1});
 ```javascript
 console.log('${1:object}', ${1:object})
 ```
-#### [cloo] alternative console.logObject
-```javascript
-console.log('${1:object}', ${1:object})
-```
 #### [ctr] console.trace
 ```javascript
 console.trace(${1:object})
