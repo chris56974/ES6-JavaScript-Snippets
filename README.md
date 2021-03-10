@@ -41,7 +41,7 @@ const ${1:package} = require('${2:filePath}');$0
 ```
 #### [mex] module exports (Common JS)
 ```javascript
-module.exports = {$0};
+module.exports = $0;
 ```
 #### [imp] import
 ```javascript
