@@ -288,12 +288,12 @@
   },
   "namedFunction": {
     "prefix": "fn",
-    "body": "const ${1:name} = ${2:arg} => $0",
+    "body": "const $1 = ($2) => $0",
     "description": "Creates a named function in ES6 syntax"
   },
   "namedFunction2": {
     "prefix": "fnn",
-    "body": "const ${1:name} = (${2:params}) => {\n\t$0\n};",
+    "body": "const $1 = ($2) => {\n\t$0\n};",
     "description": "Creates a named function in ES6 syntax"
   },
   "prototype": {

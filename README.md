@@ -269,11 +269,11 @@ ${1:array}.forEach(function(item) {
 ```
 #### [fn] single line function
 ```javascript
-const ${1:methodName} = ${2:arg} => {$3}
+const $1 = ($2) => $0
 ```
 #### [fnn] single line function
 ```javascript
-const ${1:methodName} = (${2:args}) => {
+const $1 = ($2) => {
   $0
 }
 ```
