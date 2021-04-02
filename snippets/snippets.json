@@ -36,7 +36,7 @@
   "moduleExports": {
     "prefix": "mex",
     "body": "module.exports = $0;",
-    "description": "Module exports from Common JS" 
+    "description": "Module exports from Common JS"
   },
   "exportDefault": {
     "prefix": "exp",
@@ -538,5 +538,13 @@
     "prefix": "quokka",
     "body": "/*?*/",
     "description": "Type this to get quokka query string"
+  },
+  "testcase": {
+    "prefix": "ita",
+    "body": [
+      "it(\"$1\", async function () {",
+      "\t$0",
+      ")}"
+    ]
   }
 }
