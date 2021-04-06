@@ -480,6 +480,12 @@ ssh-add ~/.ssh/id_rsa
 ```js
 /*?*/
 ```
+#### [ajs] Angular JS Expression
+
+```js
+{{ $0 }}
+```
+
 ## License
 [MIT License]
 > The extension can be found on the marketplace @ https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets

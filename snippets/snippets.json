@@ -546,5 +546,9 @@
       "\t$0",
       ")}"
     ]
+  },
+  "AngularJSExpression": {
+    "prefix": "ajs",
+    "body": "{{ $0 }}"
   }
 }
