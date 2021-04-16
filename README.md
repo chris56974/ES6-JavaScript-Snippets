@@ -45,7 +45,7 @@ module.exports = $0;
 ```
 #### [imp] import
 ```javascript
-import ${1:moduleName} from '${2:module}';$0
+import $2 from '$1';$0
 ```
 #### [imn] import without module name
 ```javascript
@@ -53,7 +53,7 @@ import '${1:module}';$0
 ```
 #### [imd] import destructuring
 ```javascript
-import {$2 } from '${1:module};'$0
+import { $2 } from '$1';$0
 ```
 #### [ime] import everything as
 ```javascript

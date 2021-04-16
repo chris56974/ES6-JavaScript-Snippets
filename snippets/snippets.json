@@ -1,7 +1,7 @@
 {
   "import": {
     "prefix": "imp",
-    "body": "import ${1:moduleName} from '${2:module}';$0",
+    "body": "import $2 from '$1';$0",
     "description": "Import a module using ES6 Modules"
   },
   "importNoModuleName": {
@@ -11,7 +11,7 @@
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import {$2 } from '${1:module}';$0",
+    "body": "import { $2 } from '$1';",
     "description": "Imports only a portion of a module using ES6 modules"
   },
   "importEverything": {
