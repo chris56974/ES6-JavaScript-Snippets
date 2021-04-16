@@ -1,4 +1,5 @@
-## ES6 JavaScript Snippets for Visual Studio Code 
+# ES6 JavaScript Snippets for Visual Studio Code 
+
 <p>
   <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
     <img src="https://vsmarketplacebadge.apphb.com/version-short/Cjay.es6-javascript-snippets.svg">
