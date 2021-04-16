@@ -542,9 +542,9 @@
   "testcase": {
     "prefix": "ita",
     "body": [
-      "it(\"$1\", async function () {",
+      "it('$1', async function () {",
       "\t$0",
-      ")}"
+      "})"
     ]
   },
   "AngularJSExpression": {

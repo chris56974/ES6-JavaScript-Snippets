@@ -416,6 +416,12 @@ get ${1:propertyName}() {return this.${0}}
 ```javascript
 set ${1:propertyName}(${2:value}) {${0}}
 ```
+#### [ita] it asynchronous
+```js
+it('$1', async function() {
+  $0
+})
+```
 ## - Webpack -
 #### [webpack] simple webpack setup
 ```javascript
