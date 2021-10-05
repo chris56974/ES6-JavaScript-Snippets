@@ -1,5 +1,6 @@
-# ES6 JavaScript Snippets for Visual Studio Code 
+# ES6 JavaScript Snippets for Visual Studio Code
 
+```html
 <p>
   <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
     <img src="https://vsmarketplacebadge.apphb.com/version-short/Cjay.es6-javascript-snippets.svg">
@@ -11,7 +12,7 @@
     <img src="https://vsmarketplacebadge.apphb.com/downloads-short/Cjay.es6-javascript-snippets.svg">
   </a>
 </p>
-
+```
 
 A JS snippets pack largely inspired by other snippet extensions on VSCode (Charalampos Karypidis, Mahmoud Ali, Dsznajder) but with a few of my own twists and added snippets !! :)
 
