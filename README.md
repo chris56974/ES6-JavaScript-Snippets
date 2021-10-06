@@ -14,7 +14,7 @@
   </a>
 </p>
 
-[This extension](https://github.com/Chris56974/ES6-JavaScript-Snippets) ([market place](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a JS snippets pack largely inspired by other snippet extensions on VSCode ([Charalampos Karypidis](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)) but with a few of my own twists and added snippets. I use this in tandem with the [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so my snippets may be biased towards those who use vim (I use "o" to jump to the next line).
+[This extension](https://github.com/Chris56974/ES6-JavaScript-Snippets) (which can also be found on the [market place](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a JS snippets pack largely inspired by other extensions ([Charalampos Karypidis](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)) but with a few of my own twists and added snippets. I use [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so my snippets is likely biased towards vim users (I use "o"/"O" & "j"/"k" to jump around).
 
 <a href="https://imgflip.com/gif/3489ko"><img src="https://i.imgflip.com/3489ko.gif" title="made at imgflip.com" alt="demonstration of the JS snippets plugin"/></a>
 
