@@ -137,7 +137,7 @@
   },
   "function": {
     "prefix": "fn",
-    "body": "function $1($2) {\n\t$0\n}"
+    "body": "function $0() {\n\t\n}"
   },
   "function_alt": {
     "prefix": "fnn",

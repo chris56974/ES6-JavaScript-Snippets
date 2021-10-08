@@ -85,10 +85,10 @@ forEach(($1) => { $0 })     // fe
 for (const $1 of $2) { $0 } // fof
 for (const $1 in $2) { $0 } // fin
 
-function $1($2) { $0 }  // fn
-function $1($0) {    }  // fnn
-const $1 = ($2) => $0   // afn
-const $1 = ($0) => {}   // afnn
+function $0() {}       // fn
+function $1($0) { }    // fnn
+const $1 = ($2) => $0  // afn
+const $1 = ($0) => {}  // afnn
 
 const { $0 } = $1 // dob
 const [$0] = $1   // dar
