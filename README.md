@@ -53,6 +53,8 @@ import { $0 } from '$1';        // imd
 import * as $1 from '$0';       // ime
 import { $2 as $0 } from '$1';  // ima
 export default $0;              // exp
+export function $0() {}         // exf
+export function $1($0) {}       // exfn
 export { $0 } from '$1'         // exd
 export { $2 as $0 } from '$1';  // exa
 

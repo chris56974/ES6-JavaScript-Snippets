@@ -31,6 +31,14 @@
     "prefix": "exp",
     "body": "export default $0;"
   },
+  "exportFunction": {
+    "prefix": "exf",
+    "body": "export function $0() {\n\t\n};"
+  },
+  "exportFunctionAlternative": {
+    "prefix": "exfn",
+    "body": "export function $1($0) {\n\t\n};"
+  },
   "exportDestructing": {
     "prefix": "exd",
     "body": "export { $1 } from '${2:module}';$0"
