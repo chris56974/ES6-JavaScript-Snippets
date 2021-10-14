@@ -14,11 +14,11 @@
   </a>
 </p>
 
-[This extension](https://github.com/Chris56974/ES6-JavaScript-Snippets) (which can also be found on the [market place](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a JS snippets pack largely inspired by other extensions ([Charalampos Karypidis](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)) but with a few of my own twists and added snippets. I use [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so my snippets is likely biased towards vim users (I use "o"/"O" & "j"/"k" to jump around).
+[This extension](https://github.com/Chris56974/ES6-JavaScript-Snippets) (which can also be found on the [marketplace](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a JS snippets pack largely inspired by other extensions ([Charalampos Karypidis](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)) but with a few of my own twists and added snippets. I use [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so my snippets is likely biased towards vim users (I use "o"/"O" & "j"/"k" to jump around).
 
 <a href="https://imgflip.com/gif/3489ko"><img src="https://i.imgflip.com/3489ko.gif" title="made at imgflip.com" alt="demonstration of the JS snippets plugin"/></a>
 
-## Supported languages (file extensions)
+## Supported File Types
 
 - JavaScript (.js)
 - TypeScript (.ts)
@@ -39,7 +39,7 @@
 
 `$1` is where the snippet starts and `$0` is where the snippet ends.
 
-## Imports and Exports
+## Snippets
 
 ```js
 // CommonJS
@@ -99,9 +99,9 @@ prototype.$1 = $0   // proto
 (($1) => { $0 })(); // iife
 
 // cla1, cla2, cla3 (for 1, 2 or 3 properties)
-class ${1:className} {
-  constructor(${2:firstProp}) {
-    this.${2:firstProp} = ${2:firstProp};
+class $1 {
+  constructor($2) {
+    this.$2 = $2;
   }
 }
 
@@ -110,29 +110,28 @@ class ${1:className} extends ${2:parentClass} {
   constructor($0) {
     super();
   }
-
-  ${1:methodName}(${2:params}) {${0}} // met
-  get ${1:propertyName}() {return this.${0}} // pget
-  set ${1:propertyName}(${2:value}) {${0}} // pset
 }
 
-constructor(${1:params}) {${0}} // con
+constructor($0) {}  // con
+
+$1 ($2) { $0 }               // met
+get $1 () {return this.${0}} // pget
+set $1 (${2:value}) {${0}}   // pset
 
 setInterval(() => { $0 }, $1);  // sti
 setTimeout(() => { $0 }, $1);   // sto
 
-JSON.parse(${1:obj});     // jp
-JSON.stringify(${1:obj}); // js
+JSON.parse($0);     // jp
+JSON.stringify($0); // js
 
-return new Promise((resolve, reject) => {${1}); // prom
+return new Promise((resolve, reject) => { $0 }); // prom
 
 // cmmb
 /**
 |--------------------------------
-| $1
+| $0
 |--------------------------------
 */
-$0
 ```
 
 ## [MIT License](https://github.com/Chris56974/ES6-JavaScript-Snippets/blob/master/LICENSE)
