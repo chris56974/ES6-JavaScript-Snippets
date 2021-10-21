@@ -145,11 +145,11 @@
   },
   "function": {
     "prefix": "fn",
-    "body": "function $0() {\n\t\n}"
+    "body": "function $1($0) {\n\t\n}"
   },
   "function_alt": {
     "prefix": "fnn",
-    "body": "function $1($0) {\n\t\n}"
+    "body": "function $1($2) {\n\t$0\n}"
   },
   "arrow_function": {
     "prefix": "afn",
@@ -157,7 +157,7 @@
   },
   "arrow_function_alt": {
     "prefix": "afnn",
-    "body": "const $1 = ($0) => {\n\t\n}"
+    "body": "const $1 = ($2) => {\n\t$0\n}"
   },
   "destructingObject": {
     "prefix": "dob",
