@@ -112,7 +112,8 @@ class ${1:className} extends ${2:parentClass} {
   }
 }
 
-constructor($0) {}  // con
+constructor($0) {}   // con
+constructor($1) {$0} // conn
 
 $1 ($2) { $0 }               // met
 get $1 () {return this.${0}} // pget

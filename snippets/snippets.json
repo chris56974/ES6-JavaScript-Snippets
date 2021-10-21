@@ -223,6 +223,10 @@
     "prefix": "con",
     "body": "constructor($0) {\n\t\n}"
   },
+  "constructor2": {
+    "prefix": "conn",
+    "body": "constructor($1) {\n\t$0\n}"
+  },
   "method": {
     "prefix": "meth",
     "body": "$1 ($2) {\n\t$0\n}"
