@@ -27,6 +27,10 @@
     "prefix": "ima",
     "body": "import { $2 as $0 } from '$1';"
   },
+  "export": {
+    "prefix": "ex",
+    "body": "export $0"
+  },
   "exportDefault": {
     "prefix": "exp",
     "body": "export default $0;"

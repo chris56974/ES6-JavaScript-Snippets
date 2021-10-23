@@ -52,6 +52,7 @@ import '$0';                    // imn
 import { $0 } from '$1';        // imd
 import * as $1 from '$0';       // ime
 import { $2 as $0 } from '$1';  // ima
+export                          // ex
 export default $0;              // exp
 export function $0() {}         // exf
 export function $1($0) {}       // exfn
