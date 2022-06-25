@@ -14,32 +14,7 @@
   </a>
 </p>
 
-[This extension](https://github.com/Chris56974/ES6-JavaScript-Snippets) (which can also be found on the [marketplace](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a JS snippets pack largely inspired by other extensions ([Charalampos Karypidis](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)) but with a few of my own twists and added snippets. I use [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so my snippets is likely biased towards vim users (I use "o"/"O" & "j"/"k" to jump around).
-
-<a href="https://imgflip.com/gif/3489ko"><img src="https://i.imgflip.com/3489ko.gif" title="made at imgflip.com" alt="demonstration of the JS snippets plugin"/></a>
-
-## Supported File Types
-
-- JavaScript (.js)
-- TypeScript (.ts)
-- JavaScript React (.jsx)
-- TypeScript React (.tsx)
-- Html (.html)
-- Vue (.vue) (Vetur extension required)
-
-### Help
-
-1. You use each snippet by typing out their name (i.e. req) and then hitting TAB on your keyboard.
-2. You must be in one of the supported file types for these snippets to work.
-3. Some snippets have multiple steps you can cycle through.
-
-- Hitting TAB will move you forward one step
-- Hitting CTRL + TAB will move you back one step
-- If you can't see any suggested snippets try hitting CTRL/COMMAND + SPACE
-
-`$1` is where the snippet starts and `$0` is where the snippet ends.
-
-## Snippets
+`$1` is where the snippet begins and `$0` is where the snippet ends.
 
 ```js
 // CommonJS
@@ -135,5 +110,29 @@ return new Promise((resolve, reject) => { $0 }); // prom
 |--------------------------------
 */
 ```
+
+## Overview
+<!-- markdownlint-disable MD033 -->
+
+This [ES6 JS extension on github](https://github.com/Chris56974/ES6-JavaScript-Snippets) (also [ES6 JS extension on the vscode marketplace](https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets)) is a snippets pack largely inspired by other extensions but with a few of my own twists and added snippets. I use the [vim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) so a lot of my snippets are likely biased towards vim users (I use "o"/"O" & "j"/"k" to jump around).
+
+## How-to
+
+1. You use each snippet by typing out the snippet name (i.e. `req`) and then hitting TAB on your keyboard.
+2. The file extension must be in one of the supported file types for these snippets to work.
+3. Some snippets have multiple steps you can cycle through by repeating TAB.
+
+- TAB moves you forward one step
+- CTRL + TAB moves you back one step
+- CTRL/COMMAND + SPACE will show you your autocomplete menu (brings up snippets)
+
+## Supported File Types
+
+- JavaScript (.js)
+- TypeScript (.ts)
+- JavaScript React (.jsx)
+- TypeScript React (.tsx)
+- Html (.html)
+- Vue (.vue) (Vetur extension required)
 
 ## [MIT License](https://github.com/Chris56974/ES6-JavaScript-Snippets/blob/master/LICENSE)
