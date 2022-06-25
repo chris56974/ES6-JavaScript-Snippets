@@ -43,6 +43,10 @@
     "prefix": "exfn",
     "body": "export function $1($0) {\n\t\n};"
   },
+  "exportFunctionAlternativeAlternative": {
+    "prefix": "exfnn",
+    "body": "export function $1($0) {\n\t\n};"
+  },
   "exportDestructing": {
     "prefix": "exd",
     "body": "export { $1 } from '${2:module}';$0"
