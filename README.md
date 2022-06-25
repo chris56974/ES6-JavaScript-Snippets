@@ -21,7 +21,7 @@
 const $0 = require('$1'); // req
 module.exports = $0;      // mex
 
-// ES6
+// ES6 Modules
 import $0 from '$1';            // imp
 import '$0';                    // imn
 import { $0 } from '$1';        // imd
@@ -29,7 +29,7 @@ import * as $1 from '$0';       // ime
 import { $2 as $0 } from '$1';  // ima
 export                          // ex
 export default $0;              // exp
-export function $0() {}         // exf
+export function $1() {$0}       // exf
 export function $1($0) {}       // exfn
 export { $0 } from '$1'         // exd
 export { $2 as $0 } from '$1';  // exa
@@ -63,7 +63,7 @@ forEach(($1) => { $0 })     // fe
 for (const $1 of $2) { $0 } // fof
 for (const $1 in $2) { $0 } // fin
 
-function $1($0) {}      // fn
+function $1() {$0}      // fn
 function $1($2) {$0}    // fnn
 const $1 = ($2) => $0   // afn
 const $1 = ($2) => {$0} // afnn
@@ -101,7 +101,7 @@ setTimeout(() => { $0 }, $1);   // sto
 JSON.parse($0);     // jp
 JSON.stringify($0); // js
 
-return new Promise((resolve, reject) => { $0 }); // prom
+new Promise((resolve, reject) => { $0 }); // prom
 
 // cmmb
 /**

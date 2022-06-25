@@ -37,7 +37,7 @@
   },
   "exportFunction": {
     "prefix": "exf",
-    "body": "export function $0() {\n\t\n};"
+    "body": "export function $1() {\n\t$0\n};"
   },
   "exportFunctionAlternative": {
     "prefix": "exfn",
@@ -149,7 +149,7 @@
   },
   "function": {
     "prefix": "fn",
-    "body": "function $1($0) {\n\t\n}"
+    "body": "function $1() {\n\t$0\n}"
   },
   "function_alt": {
     "prefix": "fnn",
@@ -261,7 +261,7 @@
   },
   "promise": {
     "prefix": "prom",
-    "body": "const $1 = new Promise((res, rej) => {\n\t$0\n});"
+    "body": "new Promise((res, rej) => {\n\t$0\n});"
   },
   "comment.big.block": {
     "prefix": "cmmb",
