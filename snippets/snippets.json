@@ -1,31 +1,31 @@
 {
   "require": {
     "prefix": "req",
-    "body": "const $0 = require('$1');"
+    "body": "const $0 = require('$1')"
   },
   "moduleExports": {
     "prefix": "mex",
-    "body": "module.exports = $0;"
+    "body": "module.exports = $0"
   },
   "import": {
     "prefix": "imp",
-    "body": "import $0 from '$1';"
+    "body": "import $0 from '$1'"
   },
   "importNoModuleName": {
     "prefix": "imn",
-    "body": "import '$0';"
+    "body": "import '$0'"
   },
   "importDestructing": {
     "prefix": "imd",
-    "body": "import { $0 } from '$1';"
+    "body": "import { $0 } from '$1'"
   },
   "importEverything": {
     "prefix": "ime",
-    "body": "import * as $1 from '$0';"
+    "body": "import * as $1 from '$0'"
   },
   "importAs": {
     "prefix": "ima",
-    "body": "import { $2 as $0 } from '$1';"
+    "body": "import { $2 as $0 } from '$1'"
   },
   "export": {
     "prefix": "ex",
@@ -33,7 +33,7 @@
   },
   "exportDefault": {
     "prefix": "exp",
-    "body": "export default $0;"
+    "body": "export default $0"
   },
   "exportFunction": {
     "prefix": "exf",
@@ -43,13 +43,9 @@
     "prefix": "exfn",
     "body": "export function $1($0) {\n\t\n}"
   },
-  "exportFunctionAlternativeAlternative": {
-    "prefix": "exfnn",
-    "body": "export function $1($0) {\n\t\n}"
-  },
   "exportDestructing": {
     "prefix": "exd",
-    "body": "export { $1 } from '${2:module}';$0"
+    "body": "export { $1 } from '${2:module}'$0"
   },
   "exportAs": {
     "prefix": "exa",
@@ -61,7 +57,7 @@
   },
   "consoleLogObject": {
     "prefix": "clo",
-    "body": "console.log('${1:object}', ${1:object});"
+    "body": "console.log('${1:object}', ${1:object})"
   },
   "consoleDir": {
     "prefix": "cdir",
@@ -69,7 +65,7 @@
   },
   "addEventListener": {
     "prefix": "ae",
-    "body": "addEventListener('${1:load}', $0)" 
+    "body": "addEventListener('${1:load}', $0)"
   },
   "querySelector": {
     "prefix": "qs",
@@ -81,59 +77,59 @@
   },
   "appendChild": {
     "prefix": "ac",
-    "body": "appendChild($0);"
+    "body": "appendChild($0)"
   },
   "removeChild": {
     "prefix": "rc",
-    "body": "removeChild($0);"
+    "body": "removeChild($0)"
   },
   "createElement": {
     "prefix": "ce",
-    "body": "createElement('$0');"
+    "body": "createElement('$0')"
   },
   "createTextNode": {
     "prefix": "ctn",
-    "body": "createTextNode('$0');"
+    "body": "createTextNode('$0')"
   },
   "createDocumentFragment": {
     "prefix": "cdf",
-    "body": "createDocumentFragment();"
+    "body": "createDocumentFragment()"
   },
   "classList.add": {
     "prefix": "ca",
-    "body": "classList.add('$0');"
+    "body": "classList.add('$0')"
   },
   "classList.toggle": {
     "prefix": "ct",
-    "body": "classList.toggle('$0');"
+    "body": "classList.toggle('$0')"
   },
   "classList.remove": {
     "prefix": "cr",
-    "body": "classList.remove('$0');"
+    "body": "classList.remove('$0')"
   },
   "getElementById": {
     "prefix": "gi",
-    "body": "getElementById('$0');"
+    "body": "getElementById('$0')"
   },
   "getElementsByClassName": {
     "prefix": "gc",
-    "body": "getElementsByClassName('$0');"
+    "body": "getElementsByClassName('$0')"
   },
   "getElementsByTagName": {
     "prefix": "gt",
-    "body": "getElementsByTagName('$0');"
+    "body": "getElementsByTagName('$0')"
   },
   "getAttribute": {
     "prefix": "ga",
-    "body": "getAttribute('$0');"
+    "body": "getAttribute('$0')"
   },
   "setAttribute": {
     "prefix": "sa",
-    "body": "setAttribute($0);"
+    "body": "setAttribute($0)"
   },
   "removeAttribute": {
     "prefix": "ra",
-    "body": "removeAttribute('$0');"
+    "body": "removeAttribute('$0')"
   },
   "querySelectAddEvent": {
     "prefix": "qsae",
@@ -188,7 +184,7 @@
     "body": [
       "class $1 {",
       "\tconstructor(${2:firstProp}) {",
-      "\t\tthis.${2:firstProp} = ${2:firstProp};",
+      "\t\tthis.${2:firstProp} = ${2:firstProp}",
       "\t}",
       "}"
     ]
@@ -198,8 +194,8 @@
     "body": [
       "class $1 {",
       "\tconstructor(${2:firstProp}, ${3:secondProp}) {",
-      "\t\tthis.${2:firstProp} = ${2:firstProp};",
-      "\t\tthis.${3:secondProp} = ${3:secondProp};",
+      "\t\tthis.${2:firstProp} = ${2:firstProp}",
+      "\t\tthis.${3:secondProp} = ${3:secondProp}",
       "\t}",
       "}"
     ]
@@ -209,9 +205,9 @@
     "body": [
       "class ${1:className} {",
       "\tconstructor(${2:firstProp}, ${3:secondProp}, ${4:thirdProp}) {",
-      "\t\tthis.${2:firstProp} = ${2:firstProp};",
-      "\t\tthis.${3:secondProp} = ${3:secondProp};",
-      "\t\tthis.${4:thirdProp} = ${4:thirdProp};",
+      "\t\tthis.${2:firstProp} = ${2:firstProp}",
+      "\t\tthis.${3:secondProp} = ${3:secondProp}",
+      "\t\tthis.${4:thirdProp} = ${4:thirdProp}",
       "\t}",
       "\t$0",
       "}"
@@ -241,41 +237,37 @@
   },
   "propertyGet": {
     "prefix": "pge",
-    "body": "get $1() {\n\treturn this.$0;\n}"
+    "body": "get $1() {\n\treturn this.$0\n}"
   },
   "propertyset": {
     "prefix": "pse",
-    "body": "set $1 ($2) {\n\t$0;\n}"
+    "body": "set $1 ($2) {\n\t$0\n}"
   },
   "setInterval": {
     "prefix": "sti",
-    "body": "setInterval(() => {\n\t$0\n}, ${1:timeInMs});"
+    "body": "setInterval(() => {\n\t$0\n}, ${1:timeInMs})"
   },
   "setTimeOut": {
     "prefix": "sto",
-    "body": "setTimeout(() => {\n\t$0\n}, ${1:timeInMs});"
+    "body": "setTimeout(() => {\n\t$0\n}, ${1:timeInMs})"
   },
   "JSON.parse": {
-    "prefix": "jp",
-    "body": "JSON.parse($0);"
+    "prefix": "jparse",
+    "body": "JSON.parse($0)"
   },
   "JSON.stringify": {
-    "prefix": "js",
-    "body": "JSON.stringify($0);"
+    "prefix": "jstringify",
+    "body": "JSON.stringify($0)"
   },
   "promise": {
     "prefix": "prom",
-    "body": "new Promise((res, rej) => {\n\t$0\n});"
+    "body": "new Promise((res, rej) => {\n\t$0\n})"
   },
-  "comment.big.block": {
-    "prefix": "cmmb",
-    "body": [
-      "/**",
-      "|--------------------------------------------------",
-      "| $1",
-      "|--------------------------------------------------",
-      "*/",
-      "$0"
-    ]
+  "jsDoc": {
+    "prefix": [
+      "jsdoc",
+      "tsdoc"
+    ],
+    "body": "/**"
   }
 }

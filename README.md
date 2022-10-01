@@ -71,7 +71,6 @@ const $1 = ($2) => {$0} // afnn
 const { $0 } = $1 // dob
 const [$0] = $1   // dar
 
-prototype.$1 = $0   // proto
 (($1) => { $0 })(); // iife
 
 // cla1, cla2, cla3 (for 1, 2 or 3 properties)
@@ -90,25 +89,21 @@ class ${1:className} extends ${2:parentClass} {
 
 constructor($0) {}   // con
 constructor($1) {$0} // conn
+prototype.$1 = $0    // proto
 
-$1 ($2) { $0 }               // met
+$1 ($2) { $0 }               // meth
 get $1 () {return this.${0}} // pget
 set $1 (${2:value}) {${0}}   // pset
 
 setInterval(() => { $0 }, $1);  // sti
 setTimeout(() => { $0 }, $1);   // sto
 
-JSON.parse($0);     // jp
-JSON.stringify($0); // js
+JSON.stringify($0); // jstringify
+JSON.parse($0);     // jparse
 
 new Promise((resolve, reject) => { $0 }); // prom
 
-// cmmb
-/**
-|--------------------------------
-| $0
-|--------------------------------
-*/
+/** */ // jsdoc, tsdoc
 ```
 
 ## Overview
