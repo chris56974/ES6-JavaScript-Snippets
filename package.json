@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/Chris56974/ES6-JavaScript-Snippets"
   },
-  "version": "1.1.7",
+  "version": "1.1.8",
   "engines": {
     "vscode": "^1.35.0"
   },
