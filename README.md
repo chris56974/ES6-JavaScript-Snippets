@@ -37,7 +37,8 @@ export { $2 as $0 } from '$1';  // exa
 // Console
 console.log()          // cl
 console.log("$1", $1)  // clo
-console.dir($1)        // cdir
+console.dir($0)        // cdir
+console.error($0)      // cerr
 
 // DOM
 addEventListener('$1', $0)  // ae
