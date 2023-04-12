@@ -55,6 +55,10 @@
     "prefix": "cl",
     "body": "console.log($0)"
   },
+  "consoleError": {
+    "prefix": "cerr",
+    "body": "console.error($0)"
+  },
   "consoleLogObject": {
     "prefix": "clo",
     "body": "console.log('${1:object}', ${1:object})"
