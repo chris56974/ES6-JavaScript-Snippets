@@ -1,19 +1,5 @@
 # ES6 JavaScript Snippets for Visual Studio Code
 
-<!-- markdownlint-disable MD033 -->
-
-<p>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
-    <img src="https://vsmarketplacebadge.apphb.com/version-short/Cjay.es6-javascript-snippets.svg">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
-    <img src="https://vsmarketplacebadge.apphb.com/installs/Cjay.es6-javascript-snippets.svg">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Cjay.es6-javascript-snippets">
-    <img src="https://vsmarketplacebadge.apphb.com/downloads-short/Cjay.es6-javascript-snippets.svg">
-  </a>
-</p>
-
 `$1` is where the snippet begins and `$0` is where the snippet ends.
 
 ```js
